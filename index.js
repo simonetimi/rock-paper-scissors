@@ -18,7 +18,7 @@ function getComputerChoice() {
 
 function getPlayerChoice() {
     playerInput = prompt('Rock, Paper or Scissors?', '');
-    playerSelection = playerInput[0].toUpperCase() + playerInput.slice(1);
+    playerSelection = playerInput[0].toUpperCase() + playerInput.slice(1).toLowerCase();
     return playerSelection;
 }
 
