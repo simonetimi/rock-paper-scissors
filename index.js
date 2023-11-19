@@ -25,9 +25,7 @@ function getPlayerChoice() {
 function playRound() {
     playerSelection = getPlayerChoice();
     computerSelection = getComputerChoice();
-    if ((playerSelection == 'Rock' && computerSelection == 'Rock') ||
-        (playerSelection == 'Paper' && computerSelection == 'Paper') ||
-        (playerSelection == 'Scissors' && computerSelection == 'Scissors')) {
+    if (playerSelection ==  computerSelection) {
         roundResult = `It's a tie! You both picked ${playerSelection}`
         computerScore++;
         playerScore++;
