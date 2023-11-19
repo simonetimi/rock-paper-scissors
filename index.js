@@ -44,13 +44,8 @@ function playRound() {
     alert(roundResult);
     return roundResult;
 }
- 
-function game() {
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    playRound();
+
+function giveResult() {
     if (playerScore == computerScore) {
         alert('Final result: Wow, it\'s a tie!')
     } else if (playerScore > computerScore)  {
@@ -60,4 +55,9 @@ function game() {
     }
 }
 
-game()
+
+for (let i = 0; i < 5; i++) {
+    playRound();
+}
+
+giveResult()

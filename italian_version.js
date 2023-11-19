@@ -45,12 +45,7 @@ function playRound() {
     return roundResult;
 }
  
-function game() {
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    playRound();
+function giveResult() {
     if (playerScore == computerScore) {
         alert('Fine della partita! Wow, è pareggio!')
     } else if (playerScore > computerScore)  {
@@ -60,4 +55,8 @@ function game() {
     }
 }
 
-game()
+for (let i = 0; i < 5; i++) {
+    playRound();
+}
+
+giveResult()
