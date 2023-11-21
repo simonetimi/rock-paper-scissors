@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="ui_script.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <title>Rock paper scissors</title>
 </head>
+
 <body>
-    <script src="index.js"></script>
+    <div class="overlay"></div>
+        <div class="header">
+            <div class="banner">
+                <h1>Play rock paper scissors!</h1>
+            </div>
+        </div>
+
+        <div class="main">
+            <h2 id="round-result">Choose your shape and beat the computer!</h2>
+            <div class="cards">
+                <div class="card-box" id="rock">✊</div>
+                <div class="card-box" id="paper">✋</div>
+                <div class="card-box" id="scissors">✌️</div>
+            </div>
+            <div class="cards">
+                <h2 class="score-track">You: <span id="player-score">0</span></h2>
+                <h2 class="score-track">Computer: <span id="computer-score">0</span></h2>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <p>By Simone Timi -</p><a href="https://github.com/simonetimi" target="_blank"><img
+                    src="images/github-mark-white.png" width="22px" height="auto" alt="GitHub logo"></a>
+            </p>
+        </div>
+
+        <div class="popup">
+            <p id="final-score"></p>
+            <button class="popup-button">Play again!</button>
+        </div>
+    </div>
+
 </body>
+
 </html>
