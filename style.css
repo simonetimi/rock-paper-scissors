@@ -7,7 +7,6 @@
 
 body {
     min-height: 100vh;
-
     background-color: #F0DBAF;
     display: flex;
     flex-direction: column;
@@ -72,8 +71,8 @@ h2 {
 }
 
 .card-box {
-    width: 200px;
-    height: 200px;
+    width: 12em;
+    height: 12em;
     background-color: #DC8686;
     border: 3px solid #DC8686;
     border-radius: 16px;
@@ -89,7 +88,8 @@ h2 {
 }
 
 .card-box:hover {
-    width: 200px;
+    width: 12em;
+    height: 12em;
     outline: 4px solid #B06161;
     margin: 0;
     cursor: default;
@@ -110,7 +110,20 @@ h2 {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
 
+#rock-img,
+#paper-img,
+#scissors-img {
+    width: 10em;
+    height: 10em;
+}
+
+#rock-img:hover,
+#paper-img:hover,
+#scissors-img:hover {
+    width: 11em;
+    height: 11em;
 }
 
 .main {
@@ -132,20 +145,6 @@ h2 {
     font-size: 1em;
     letter-spacing: 0.1ch;
     gap: 1%;
-}
-
-#rock-img,
-#paper-img,
-#scissors-img {
-    width: 180px;
-    height: 180px;
-}
-
-#rock-img:hover,
-#paper-img:hover,
-#scissors-img:hover {
-    width: 200px;
-    height: 200px;
 }
 
 .score-track {
