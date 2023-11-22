@@ -7,11 +7,11 @@ let roundResult = '';
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 3);
     if (randomNumber === 0) {
-        computerSelection = 'Rock';
+        computerSelection = 'Sasso';
     } else if (randomNumber === 1) {
-        computerSelection = 'Paper';
+        computerSelection = 'Carta';
     } else {
-        computerSelection = 'Scissors';
+        computerSelection = 'Forbici';
     }
     return computerSelection;
 }
@@ -19,19 +19,19 @@ function getComputerChoice() {
 //Ognuna di queste fa partire la funzione playRound, ma con un valore di playerSelection diverso
 let rock = document.querySelector('#rock');
 rock.addEventListener('click', () => {
-    playerSelection = 'Rock';
+    playerSelection = 'Sasso';
     playRound();
 });
 
 let paper = document.querySelector('#paper');
 paper.addEventListener('click', () => {
-    playerSelection = 'Paper';
+    playerSelection = 'Carta';
     playRound();
 });
 
 let scissors = document.querySelector('#scissors');
 scissors.addEventListener('click', () => {
-    playerSelection = 'Scissors';
+    playerSelection = 'Forbici';
     playRound();
 });
 
@@ -39,20 +39,20 @@ function playRound() {
     computerSelection = getComputerChoice();
     if (playerScore < 5 && computerScore < 5) {
         if (playerSelection == computerSelection) {
-            roundResult = `It's a tie! You both picked ${playerSelection}`;
+            roundResult = `È pareggio! Avete scelto entrambi ${playerSelection}`;
         } else if (
-            (playerSelection == 'Rock' && computerSelection == 'Paper') ||
-            (playerSelection == 'Paper' && computerSelection == 'Scissors') ||
-            (playerSelection == 'Scissors' && computerSelection == 'Rock')
+            (playerSelection == 'Sasso' && computerSelection == 'Carta') ||
+            (playerSelection == 'Carta' && computerSelection == 'Forbici') ||
+            (playerSelection == 'Forbici' && computerSelection == 'Sasso')
         ) {
-            roundResult = `You lose! ${computerSelection} beats ${playerSelection}`;
+            roundResult = `Hai perso! ${computerSelection} batte ${playerSelection}`;
             computerScore++;
         } else if (
-            (playerSelection == 'Rock' && computerSelection == 'Scissors') ||
-            (playerSelection == 'Scissors' && computerSelection == 'Paper') ||
-            (playerSelection == 'Paper' && computerSelection == 'Rock')
+            (playerSelection == 'Sasso' && computerSelection == 'Forbici') ||
+            (playerSelection == 'Forbici' && computerSelection == 'Carta') ||
+            (playerSelection == 'Carta' && computerSelection == 'Sasso')
         ) {
-            roundResult = `You win! ${playerSelection} beats ${computerSelection}`;
+            roundResult = `Hai vinto! ${playerSelection} batte ${computerSelection}`;
             playerScore++;
         }
     }
@@ -70,13 +70,13 @@ function playRound() {
         document.querySelector('.overlay').style.display = 'block';
         document.querySelector('.popup').style.display = 'flex';
         let finalScore = document.querySelector('#final-score');
-        finalScore.textContent = 'You won!';
+        finalScore.textContent = 'Hai vinto!';
     } else if (computerScore == 5) {
         // Fine partita, computer vincitore
         document.querySelector('.overlay').style.display = 'block';
         document.querySelector('.popup').style.display = 'flex';
         let finalScore = document.querySelector('#final-score');
-        finalScore.textContent = 'You lost!';
+        finalScore.textContent = 'Hai perso!';
     }
 
 }
@@ -94,5 +94,5 @@ btn.addEventListener('click', () => {
     let computerScoreText = document.querySelector('#computer-score');
     computerScoreText.textContent = computerScore;
     let roundResultText = document.querySelector('#round-result');
-    roundResultText.textContent = 'Choose your shape and beat the computer!';
+    roundResultText.textContent = 'Scegli la tua mano e batti il computer!';
 });

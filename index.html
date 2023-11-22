@@ -8,27 +8,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Prompt:wght@100;200;400;500;700&display=swap" rel="stylesheet">
 
-    <title>Rock paper scissors</title>
+    <title>Rock Paper Scissors</title>
 </head>
 
 <body>
     <div class="overlay"></div>
         <div class="header">
+            <p class="languages"><a href="italian-version/index.html"><img class="flag" src="images/it.svg" alt="Italiano"></a><a href="index.html"><img class="flag" src="images/us.svg" alt="English"></a></p>
             <div class="banner">
                 <h1>Play rock paper scissors!</h1>
             </div>
         </div>
 
         <div class="main">
-            <h2 id="round-result">Choose your shape and beat the computer!</h2>
+            <h2 id="round-result">Choose your hand and beat the computer!</h2>
             <div class="cards">
-                <div class="card-box" id="rock">✊</div>
-                <div class="card-box" id="paper">✋</div>
-                <div class="card-box" id="scissors">✌️</div>
+                <div class="card-box" id="rock"><img src="./images/rock.png" alt="Rock" id="rock-img"></div>
+                <div class="card-box" id="paper"><img src="./images/paper.png" alt="Paper" id="paper-img"></div>
+                <div class="card-box" id="scissors"><img src="./images/scissors.png" alt="Scissors" id="scissors-img"></div>
             </div>
             <div class="cards">
                 <h2 class="score-track">You: <span id="player-score">0</span></h2>
@@ -38,8 +37,8 @@
 
 
         <div class="footer">
-            <p>By Simone Timi -</p><a href="https://github.com/simonetimi" target="_blank"><img
-                    src="images/github-mark-white.png" width="22px" height="auto" alt="GitHub logo"></a>
+            <p>2023 © Simone Timi -</p><a href="https://github.com/simonetimi" target="_blank"><img
+                    src="images/github-mark-white.png" id="github" alt="GitHub logo"></a>
             </p>
         </div>
 
